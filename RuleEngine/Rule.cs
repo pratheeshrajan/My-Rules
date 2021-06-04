@@ -22,7 +22,7 @@ namespace RuleEngine
 
         public Rule()
         {
-            client.BaseAddress = new Uri("https://uat.otiscreate.com/api/");
+            client.BaseAddress = new Uri("https://uat.oc.com/api/");
             HttpResponseMessage response = client.GetAsync("iaaData?languageCode=en-gb&productid=1&shareUid=null&mode=null").Result;
             response.EnsureSuccessStatusCode();
             string result = response.Content.ReadAsStringAsync().Result;
